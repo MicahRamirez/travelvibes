@@ -23,6 +23,18 @@ export default function Home() {
       {/* Hero Section */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto text-center">
+          {/* Burmese Mountain Dog Section */}
+          <div className="mb-12">
+            <img
+              src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=600&fit=crop"
+              alt="Burmese Mountain Dog"
+              className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full mx-auto shadow-2xl border-4 border-white"
+            />
+            <h2 className="text-4xl md:text-5xl font-bold text-white mt-6">
+              Kanako :)
+            </h2>
+          </div>
+
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
             Discover Your Next
             <span className="block text-yellow-300">Adventure</span>
