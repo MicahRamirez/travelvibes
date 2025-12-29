@@ -1,0 +1,15 @@
+import { createClient } from '@supabase/supabase-js';
+
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL!;
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY!;
+
+export const supabase = createClient(supabaseUrl, supabaseAnonKey);
+
+export interface GroupLocation {
+  id: string;
+  group_code: string;
+  user_name: string;
+  latitude: number;
+  longitude: number;
+  updated_at: string;
+}
