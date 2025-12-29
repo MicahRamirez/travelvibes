@@ -31,7 +31,7 @@ export default function MapPage() {
   }, []);
 
   const fetchLocations = useCallback(async () => {
-    if (!groupCode) return;
+    if (!groupCode || !supabase) return;
     setLoading(true);
     const { data, error } = await supabase
       .from('group_locations')
@@ -83,11 +83,22 @@ export default function MapPage() {
       return;
     }
 
+    if (!supabase) {
+      setError('Database connection not available');
+      return;
+    }
+
     setUpdating(true);
     setError('');
 
     navigator.geolocation.getCurrentPosition(
       async (position) => {
+        if (!supabase) {
+          setError('Database connection not available');
+          setUpdating(false);
+          return;
+        }
+
         const { latitude, longitude } = position.coords;
 
         const { error } = await supabase
