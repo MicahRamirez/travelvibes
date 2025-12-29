@@ -26,8 +26,8 @@ export default function Home() {
           {/* Burmese Mountain Dog Section */}
           <div className="mb-12">
             <img
-              src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?w=600&h=600&fit=crop"
-              alt="Burmese Mountain Dog"
+              src="https://images.unsplash.com/photo-1587773635124-a25df805fa8e?w=600&h=600&fit=crop"
+              alt="Bernese Mountain Dog"
               className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-full mx-auto shadow-2xl border-4 border-white"
             />
             <h2 className="text-4xl md:text-5xl font-bold text-white mt-6">
